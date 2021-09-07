@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Game</title>
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+</head>
+<body >
+     <h4 class="title">Welcome To Poker Game</h4>
+    <div class="container">
+        <div class="card" id="1" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1"  />
+        </div>
+        <div class="card" id="2" onclick="flip(this)">
+            <img src="/img/back.png"  alt=" " class="image1" >
+        </div>
+        <div class="card" id="3" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1" >
+        </div>
+        <div class="card" id="4" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1">
+        </div>
+        <div class="card" id="5" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1" >
+        </div>
+        <div class="card" id="6" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1" >
+        </div>
+        <div class="card" id="7" onclick="flip(this)">
+            <img src="/img/back.png"   alt="" class="image1" >
+        </div>
+        <div class="card" id="8" onclick="flip(this)">
+            <img src="/img/back.png"   alt="" class="image1" >
+        </div>
+        <div class="card" id="9" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1" >
+        </div>
+        <div class="card" id="10" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1" >
+        </div>
+        <div class="card" id="11" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1" >
+        </div>
+        <div class="card" id="12" onclick="flip(this)">
+            <img src="/img/back.png"  alt="" class="image1" >
+        </div>
+    </div>
+
+    <div class="score-container">
+        <p>Score = <span id="mark">0</span></p>
+
+        <button class="btn btn-start" id="start" onclick="initialload()" >Play</button>
+        <button class="btn btn-new" id="new" onclick="shuffle()">New Card</button>
+
+        <p class="time" >Time Left : <span class="timing" id="timing" >0s</span> </p>
+    </div>
+
+    <p class="end" id="end"></p>
+
+    <script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>

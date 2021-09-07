@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+*{
+  box-sizing: border-box;
+}
+
+body{
+    font-family: 'Mulish',sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:  linear-gradient(
+        to right, #0e9c13,
+        #075800);
+    margin: 0;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   
+}
+
+.title{
+    background-color: #681257;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 40px;
+    /* #451F89 */
+    /* color: #451F89; */
+    border: 10px solid  #681257;
+    color : #8446CF;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px #8446CF;
+}
+
+@keyframes turn {
+    0%{
+        transform:  scaleX(1);
+    }
+    100%{
+        transform: scaleX(-1);
+    }
+  
+}
+
+@keyframes back{
+    0%{
+        transform:  scaleX(-1);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+.card{
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card.change{
+    /* transition: all 0.5s linear; */
+    animation: turn;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
+
+}
+.card.reverse{
+    animation: back;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+/* .card:hover{
+    transform: scaleX(-1);
+} */
+
+img{
+    width: 120px;
+    height: 120px; 
+}
+
+.score-container{
+    width: 800px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.btn{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 10px rgba(0,0,0,0.5);
+    font-size: 20px;
+    color: #fff;
+    background : linear-gradient(
+        to bottom,
+         #730103,
+         #320001
+    );
+    cursor : pointer;
+}
+
+.btn:hover{
+    transform: scale(1.2);
+}
+
+.btn-new{
+    width: 150px;
+}
+
+.btn:focus{
+    outline: 0;
+}
+.timing{
+    position: absolute;
+}
+
+.timing.alert{
+
+    animation-name: alert;
+    /* animation-delay: 4s; */
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-fill-mode: forwards; */
+    /* color: red; */
+}
+@keyframes alert{
+    0% {
+        opacity: 0; 
+    }
+    10%{ opacity: 1; 
+        color: red;
+    }
+    90%{ opacity: 1; transform: translateY(0px);
+        color: red;
+    }
+    99%{ opacity: 0; 
+        transform: translateY(-30px) scale(2) ;
+        font-size: 20px;
+        color: red;
+    }
+    100%{ opacity: 0; 
+        color: red;
+    }
+}
+
+.end{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid black;
+    background : rgba(0 ,0,0, 0.5);
+    animation: pop;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    display: none;
+}
+@keyframes pop{
+    0%{
+        transform: translate(0);
+    }
+
+    100%{
+        transform : translate(0);
+    }
+
+}
